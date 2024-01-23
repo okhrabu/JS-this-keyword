@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prakash</title>
+</head>
+<body>
+    <h2><b style="color:red">this</b> alone</h2>
+    <p>when use alone,<i style="color: red;">this</i>refers to the <b>globle object.</b></p>
+    <p>In a browser windows the globle object is <i style="color: red;">[object windows]</i>:</p>
+    <p id="demo"></p>
+    <script>
+        let x=this;
+        document.getElementById("demo").innerHTML=x;
+    </script>
+</body>
+</html>
