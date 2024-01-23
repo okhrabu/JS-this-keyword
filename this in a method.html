@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRakash Limbu</title>
+</head>
+<body>
+    <h2>The Java Script <i>this</i>Keyword</h2>
+    <p>In this example,<b>this </b> refers to the <b>person</b> is methode of theperson  object.</p>
+    <p>Becouse <b>fullName</b>is a methode of the person object.</p>
+    <p id="demo"></p>
+    <script>
+        //creator an object.
+        const person = {
+            firstName:"Prakash",
+            lastName: "Limbu",
+            phone:"9860705761",
+            fullName:function(){
+                return this.firstName + " " + this.lastName + " " + this.phone;
+            }
+        };
+        //display data from the object
+        document.getElementById("demo").innerHTML=person.fullName();
+    </script>
+</body>
+</html>
