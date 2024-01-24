@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prakash Limbu</title>
+</head>
+<body>
+    <h2>the java script <i>this</i> keywords</h2>
+    <p>in this example,<b>this</b> refer to the <b>person object</b>.</p>
+    <p id="demo"></p>
+    <script>
+        //create an object
+        const person = {
+            firstName:"praksh",
+            lastName:"limbu",
+            phone:"131232534545",
+            address:"pathari",
+            education:"bachelerdegree.",
+            myFunction : function(){
+                return this;
+            }
+        };
+        //display datafrom thisobject.
+        document.getElementById("demo").innerHTML= person.myFunction();
+    </script>
+</body>
+</html>
