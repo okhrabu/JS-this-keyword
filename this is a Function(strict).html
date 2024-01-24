@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Prakash Limbu</title>
+</head>
+<body>
+   <h2>the JS <i>this</i>keyword</h2>
+   <p>in a function,by default, <b>this</b> refers to the  globle object. </p>
+   <p>strict mode dosenot allowed default bainding,so <b>this</b> is:</p>
+   <p id="demo"></p>
+   <script>
+    "use strict";
+    document.getElementById("demo").innerHTML=myFunction();
+    function myFunction(){
+        return this;
+    }
+   </script>
+</body>
+</html>
