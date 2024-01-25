@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prakash Limbu</title>
+</head>
+<body>
+    <h2>Explicit Function Binding</h2>
+    <p>the call()and apply()methods are predefined javaScript methods. <br>They can bothbe used to call an object methode with another object are argument.  </p>
+    <p>In this example <b>this</b>refer to person2, even if its a methode of person1:</p>
+    <p id="demo"></p>
+    <script>
+        const person1 = {
+            fullName: function(){
+                return this.firstName + "  " + this.lastName;
+            }
+        };
+        const person2 = {
+            firstName : "prakash",
+            lastName : "limbu",
+        }
+        let x=person1.fullName.call(person2);
+        document.getElementById("demo").innerHTML = x;
+    </script>
+</body>
+</html>
