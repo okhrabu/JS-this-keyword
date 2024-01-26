@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prakash Limbu</title>
+</head>
+<body>
+    <h2>function borowing</h2>
+    <p>with the <i style="color: red;">bind()</i> methode, an object can borrow a methode from another object: <br> This example creates 2 objects(person and member) <br>This member object borrows the fullname methode from the person object: </p>
+    <p>The member object borrows the fullName methode from person:</p>
+    <p id="demo"></p>
+    <script>
+        const person = {
+            firstName:"praksh",
+            lastName:"limbu",
+            fullName: function(){
+                return this.firstName + " " + this.lastName;
+            }
+        };
+        const member = {
+            firstName:"moona",
+            lastName: "subba",
+        }
+        let fullName=person.fullName.bind(member);
+        document.getElementById("demo").innerHTML=fullName();
+    </script>
+</body>
+</html>
