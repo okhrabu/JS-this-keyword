@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prakash Limbu</title>
+</head>
+<body>
+    <h1>The javascript <i>this</i>keyword</h1>
+    <p>In this example <b>this</b>refers to person2,even if it is a methodeof person1:
+    </p>
+    <p id="demo"></p>
+    <script>
+        const person1 = {
+            fullName:function() {
+                return this.firstName + " " + this.lastName;
+            }
+        };
+        const person2 = {
+            firstName:"praksh",
+            lastName:"Limbu",
+        }
+        let x = person1.fullName.call(person2);
+        document.getElementById("demo").innerHTML=x;
+    </script>
+</body>
+</html>
